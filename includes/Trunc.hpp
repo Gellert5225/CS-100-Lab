@@ -13,5 +13,7 @@ public:
 
 	Base* get_left();
     Base* get_right();
+
+	void accept(CountVisitor*);
 };
 #endif

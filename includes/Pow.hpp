@@ -31,6 +31,10 @@ public:
         Base* get_right() {
                 return Exponent;
         }
+
+        void accept(CountVisitor* cv) {
+                cv->visit_pow();
+        }
 private:
         Base* Root;
         Base* Exponent;

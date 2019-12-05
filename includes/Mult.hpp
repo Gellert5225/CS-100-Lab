@@ -32,6 +32,10 @@ public:
 	Base* get_right() {
 		return multiplier;
 	}
+
+	void accept(CountVisitor* cv) {
+		cv->visit_mult();
+	}
 private:
 	Base* multiplicant;
 	Base* multiplier;

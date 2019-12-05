@@ -25,3 +25,7 @@ Base* Ceil::get_left() {
 Base* Ceil::get_right() {
     return base;
 }
+
+void Ceil::accept(CountVisitor* cv) {
+    cv->visit_ceil();
+}

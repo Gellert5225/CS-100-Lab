@@ -29,6 +29,10 @@ public:
         Base* get_right() {
                 return Subtrahend;
         }
+
+        void accept(CountVisitor* cv) {
+                cv->visit_sub();
+        }
 private:
         Base* Minuend;
         Base* Subtrahend;

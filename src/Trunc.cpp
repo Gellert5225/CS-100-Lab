@@ -25,3 +25,7 @@ Base* Trunc::get_left() {
 Base* Trunc::get_right() {
     return base;
 }
+
+void Trunc::accept(CountVisitor* cv) {
+    cv->visit_trunc();
+}

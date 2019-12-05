@@ -31,6 +31,10 @@ public:
                 return nullptr;
         }
 
+        void accept(CountVisitor* cv) {
+                cv->visit_op();
+        }
+
 private:
 	double operand;
 };

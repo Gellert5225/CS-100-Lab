@@ -25,3 +25,7 @@ Base* Paren::get_left() {
 Base* Paren::get_right() {
     return base;
 }
+
+void Paren::accept(CountVisitor* cv) {
+    cv->visit_paren();
+}

@@ -32,6 +32,10 @@ public:
 	Base* get_right() {
 		return divisor;
 	}
+
+	void accept(CountVisitor* cv) {
+		cv->visit_div();
+	}
 private:
 	Base* divident;
 	Base* divisor;

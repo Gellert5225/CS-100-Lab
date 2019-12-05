@@ -4,6 +4,7 @@
 #include <string>
 class Iterator;
 #include "iterator.hpp"
+#include "visitor.hpp"
 
 class Base {
     public:
@@ -17,6 +18,8 @@ class Base {
 
         virtual Base* get_left() = 0;
         virtual Base* get_right() = 0;
+
+        virtual void accept(CountVisitor*) = 0;
     private:
         Base* left;
         Base* right;

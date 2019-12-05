@@ -25,3 +25,7 @@ Base* Floor::get_left() {
 Base* Floor::get_right() {
     return base;
 }
+
+void Floor::accept(CountVisitor* cv) {
+    cv->visit_floor();
+}

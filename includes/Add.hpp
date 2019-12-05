@@ -32,6 +32,10 @@ public:
 	Base* get_right() {
 		return Addend;
 	}
+
+	void accept(CountVisitor* cv) {
+		cv->visit_add();
+	}
 private:
 	Base* Augend;
 	Base* Addend;

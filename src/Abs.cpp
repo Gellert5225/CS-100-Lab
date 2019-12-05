@@ -26,3 +26,7 @@ Base* Abs::get_left() {
 Base* Abs::get_right() {
     return base;
 }
+
+void Abs::accept(CountVisitor* cv) {
+    cv->visit_abs();
+}
