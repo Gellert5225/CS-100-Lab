@@ -12,6 +12,7 @@ int main(int argc, char** argv) {
 
     CountVisitor* cv = new CountVisitor();
     PreorderIterator* preorder = new PreorderIterator(dummy);
+
     preorder->first();
     while (!preorder->is_done()) {
         preorder->current()->accept(cv);
@@ -19,6 +20,7 @@ int main(int argc, char** argv) {
     }
 
     printf("number of +: %i\n", cv->add_count());
+    printf("number of abs: %i\n", cv->abs_count());
     printf("number of operands: %i\n", cv->op_count() - 1); // subtract the dummy
     
     std::cout << b->stringify() << std::endl;
