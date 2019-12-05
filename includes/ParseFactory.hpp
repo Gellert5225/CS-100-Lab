@@ -1,3 +1,6 @@
+#ifndef __PARSE_FACTORY_HPP__
+#define __PARSE_FACTORY_HPP__
+
 #include "base.hpp"
 
 class ParseFactory {
@@ -14,3 +17,5 @@ public:
 
     Base* parse(char** input, int length);
 };
+
+#endif
