@@ -1,0 +1,19 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+ADD_SUBDIRECTORY(googletest)
+INCLUDE_DIRECTORIES(includes)
+FILE(GLOB SOURCES src/*.cpp ./main.cpp)
+FILE(GLOB TEST_SOURCES src/*.cpp unit_test.cpp)
+
+SET(CMAKE_CXX_STANDARD 11)
+
+ADD_EXECUTABLE(calculator
+    ${SOURCES}
+)
+
+ADD_EXECUTABLE(test
+    ${TEST_SOURCES}
+)
+
+TARGET_LINK_LIBRARIES(test gtest)
+TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
