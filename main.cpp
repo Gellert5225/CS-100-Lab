@@ -18,11 +18,11 @@ int main(int argc, char** argv) {
         preorder->current()->accept(cv);
         preorder->next();
     }
-
+    
     printf("number of +: %i\n", cv->add_count());
     printf("number of abs: %i\n", cv->abs_count());
     printf("number of operands: %i\n", cv->op_count() - 1); // subtract the dummy
-    
-    std::cout << b->stringify() << std::endl;
+
+    std::cout << b->stringify() << " = " << b->evaluate() << std::endl;
     return 0;
 }
